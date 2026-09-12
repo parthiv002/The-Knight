@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Knight | The Rescue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><p class="eyebrow">A THREE CHAPTER QUEST</p><h1>THE KNIGHT <span>/</span> THE RESCUE</h1></div></div>
+      <div class="chapter-readout"><span id="levelKicker">CHAPTER 01</span><strong id="levelName">THE FIRST STEP</strong></div>
+    </header>
+
+    <section class="game-wrap">
+      <div class="hud hud-top">
+        <div class="hud-group"><span class="label">HEALTH</span><strong id="health">100 / 100</strong></div>
+        <div class="objective"><span class="label">CURRENT OBJECTIVE</span><strong id="objective">Reach the eastern gate</strong></div>
+        <div class="hud-group right"><span class="label">POTIONS <span class="key">E</span></span><strong id="potions">3</strong><span class="label">RELICS</span><strong id="score">00</strong></div>
+      </div>
+      <canvas id="game" width="1280" height="720" aria-label="The Knight platform game"></canvas>
+      <div class="hud hud-bottom"><span id="hint">A / D to move</span><span id="status">READY YOURSELF</span><span id="progress">01 / 03</span></div>
+    </section>
+
+    <section class="controls"><div><span class="key">A</span><span class="key">D</span> MOVE</div><div><span class="key wide">SPACE</span> JUMP</div><div><span class="key">J</span> ATTACK</div><div><span class="key">E</span> HEAL</div><button id="restart" type="button">RESTART RUN <span>↻</span></button></section>
+    <p class="footer-note">The old keep is quiet tonight. Somewhere beyond its walls, a captive waits.</p>
+  </main>
+  <div class="modal hidden" id="modal"><div class="modal-card"><p class="eyebrow" id="modalKicker">THE QUEST CONTINUES</p><h2 id="modalTitle">A NEW CHAPTER</h2><p id="modalText">The road opens.</p><button id="modalButton" type="button">CONTINUE <span>→</span></button></div></div>
+  <script src="game.js"></script>
+</body>
+</html>
